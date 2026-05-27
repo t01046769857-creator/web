@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>input element</title>
+    </head>
+    <body>
+        <textarea cols="40" rows="5"></textarea>
+        <hr>
+
+        <!-- 콤보박스 용 요소 -->
+         <select>
+            <option value="aa">사과</option>
+            <option value="bb">바나나</option>
+            <option value="cc">오렌지</option>
+         </select>
+         <!--  -->
+         <select>
+            <optgroup>
+                <option value="a">짜장면</option>
+                <option value="b">짬뽕</option>
+                <option value="c">볶음밥</option>
+            </optgroup>
+            <optgroup label="일식">
+                option
+            </optgroup>
+         </select>
+
+         <hr>
+
+         <fieldset>
+            <label>이름:<input type="text" name="name"></label>
+            <label>이름:<input type="text" name="age"></label>
+         </fieldset>
+
+         <hr>
+         <!--  파일선택하기-->
+         <input type="file" accept="image/png">
+         <!-- 여러개의 파일 선택 -->
+         <input type="file" accept="image/*" multiple="multiple">
+         <hr>
+
+         <!-- 비교적 최근에 새로 추가된 type들 -->
+        <form action="">
+            <!-- 날짜 선택관련 -->
+            <input type="date"> <br>
+            <input type="datetime"> <!--지원안됨-->
+            <input type="datetime-local"> <br>
+            <input type="month">
+            <input type="week">
+            <hr>
+
+            <!-- 색상 선택창 -->
+            <input type="color">
+
+            <!-- 이메일 입력박스(모바일에서 키패드의 모양이 달라짐.) -->
+            <input type="email"><br>
+
+            <!-- 전화번호 (모바일에서 키패드의 모양이 달라짐.)-->
+            <input type="tel"><br>
+
+            <!-- 검색어 입력 박스(글씨 쓰면 삭제버튼 우측에 생김(X)) -->
+            <input type="search"><br>
+
+            <!-- 범위지정 요소 -->
+            <input type="range" min="0" max="10" step="2" value="4">
+            
+            <!-- 숫자선택 요소 -->
+             <input type="number" min="210" max="300" step="10" value="230">
+
+            <!-- url입력 타입(모바일에서 키패드의 모양이 달라짐.) -->
+            <input type="url">
+
+            <hr>
+
+            <!-- 비교적 최근에 새로이 추가된 input -->
+            <form action="./aaa.php">
+                <!-- 힌트 글씨 표시 -->
+                <input type="text" placeholder="이름을 입력하세요.">
+
+                <!-- 반드시 입력해야 하는 요소에 적용하는 속성(form 요소에만 작동) -->
+                <input type="text" required> <br>
+
+                <hr>
+                <input type="submit">
+                <!-- 글씨는 보이지만 수정 불가 -->
+                <input type="text" readonly value="sam"><br>
+
+                <!-- 페이지가 로딩될 때 가장 먼저-->
+                <input type="text" autofocus><br>
+
+                <!-- 최대 입력 글자수 제한 -->
+                <input type="text" maxlength="5">
+
+                <!-- 자동완성기능 -->
+                <input type="text" autocomplete list="datas">
+                <datalist> id='datas'
+                    <option value="canada" label="캐나다"></option>
+                    <option value="china" label="중국"></option>
+                    <option value="korea" label="한국"></option>
+                </datalist>
+            </form>
+        </form>
+    </body>
+</html>
+
+<!-- 수행과제 -->
+<!-- chapter 4.3~chapter 5까지 모든 페이지 읽고 되새김 문제들 수행 -->

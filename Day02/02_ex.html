@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"
+        <title>element ex</title>
+    </head>
+    <body>
+        <!-- 1. audio -->
+        <audio src="./audio/old_pop.mp3" controls="controls"></audio>
+    <audio controls>
+
+        <audio src="./audio/old_pop.mp3" type="audio/mp3">
+
+        </audio>
+        <hr>
+        <!--  -->
+        <video controls width="480" height="320">
+            <source src="./video/trailer.mp4" type="video/mp4">
+        <!-- 예전에 미디어 파일 전용 요소가 없을 때 사용하던 요소 -->
+        <embed src="./SQL.pdf" type="application/pdf">
+        <hr>
+        <object data="./SQL.pdf" type="application" width="50%" height="300"></object>
+        <hr>
+        <!-- 현재는 embed, object ==> iframe 으로 사용하는 것을 권장 -->
+
+        <!-- 3. ifarme [inline frame] : 다른 html문서를 내 문서안에 보여주기 -->
+        <!-- 1)상대경로 -->
+        <iframe src="./01_table.html"></iframe>
+        <!-- 2)절대경로 -->
+        <iframe src="http://mbca2025aix.dothom.co.kr/index.html" frameborder="0"></iframe>
+        <!-- 3) -->
+        <iframe src="" frameborder="2" name="aaa" width="560"></iframe>
+        <a href="http://www.daum.net" target="aaa">다음포털사이트</a>
+        <!-- iframe이 열지 못하는 사이트도 존재함. 보통 동적으로 화면을 구성하는 사이트들(요즘 많은 사이트가 이렇게 만들고 있음.) -->
+        <a href="http://www.naver.com" target="aaa">네이버포털사이트</a>
+        <hr>
+        <!-- pdf 파일 뷰어도  -->
+        <iframe src="./SQL.pdf" frameborder="0" width="50%" height="300"></iframe>
+        <hr>
+
+        <!-- 4. 화면의 일부 영역을 구분하는 용도의 요소 2개 : div, span -->
+         <div style="background-color: yellow; border: 2px solid red; padding-left: 10px;">
+            <h2>title</h2>
+            <p>this is message.</p>
+         </div>
+
+         <!-- div의 블럭요소 특징 -->
+        <p>
+            안녕하세요. 나는 <div style="color: blue;">홍길동</div> 입니다.
+        </p>
+
+        <!-- span의 인라인 요소 특징 -->
+         <p>
+            안녕하세요. 나는 <span style="color: blue;">홍길동</span> 입니다.
+        </p>
+
+        <hr>
+
+        <!-- div요소는 실제 협업의 프론트엔드 화면 개발할 때 ㄱ -->
+         <!--웹 페지이지를  -->
+         <!-- 이때 div를 사용함. -->
+        <div id="header" style="background-color: yellow;">앱 상단 로고 영역</div>
+        <div id="main" style="background-color: green;">메인영역</div>
+        <div id="footer" style="background-color:  blue;">앱 하단 바 영역</div>
+        
+
+
+    </body>
+</html>

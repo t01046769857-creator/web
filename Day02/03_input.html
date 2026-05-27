@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <mata charst="utf-8"
+        <title
+    </head>
+    <body>
+        <!--  -->
+        <!--  -->
+        <input type="taxt" size="40"> <br>
+        <!--  -->
+        <input type>
+
+        <hr>
+
+        <!-- 서버에 전송되는 값은 input요소의 value 속성값이 전송됨 -->
+         <!-- (중요!)두 라디오 버튼이 서로 한 그룹으로 인식하도록 name속성이 같아야함 -->
+        라디오버튼: 
+        <input type="radio" value="aaa" name="rg"> aaa
+        <input type="radio" value="bbb" name="rg"> bbb
+        <hr>
+
+        <!-- label -->
+         <input type="radio" value="male" name="gender" id="rb1">
+         <label for="">남성</label>
+
+         <input type="radio" value="female" name="gender" id="rb2" checked="checked">
+         <label for="rb2">여성</label>
+
+         <hr>
+
+         <!-- 4. 체크박스(multiple choice) -->
+         <!--lavel 요소안에 input요소는 넣으면 for  -->
+         <label><input type="checkbox" value="apple" name="fruits" checked>사과</label>
+         <label><input type="checkbox" value="banana" name="fruits">바나나</label>
+         <label><input type="checkbox" value="orange" name="fruits" checked>오렌지</label>
+         <!--  -->
+
+         <hr>
+
+         <!-- 서버 전송에 요청하는 버튼 타입 submit[항상 form 요소와 사용] -->
+        <!--sumbit 타입의 버튼을 클릭하면 form요소의 action 속성에 지정된 서버프로그램이 실행됨.  -->
+        <form action="./aaa.php">
+            <input type="text" name="title">
+            <input type="text" name="message">
+            <input type="submit" value="보내기">
+            <!-- 6. 작성내용 -->
+            <input type="reset" value="취소">
+            <!-- 7. 이미지를 이용한 sumbit -->
+            <input type="image" src="./image/sydney.jpg" width="50">
+        </form>
+
+        <hr>
+
+        <!-- 8. inp -->
+        <input type="button" value="중복체크" onclick="alert('중복된 id 입니다.')">
+
+        <!--  -->
+        <button onclick="alert('눌렀다')">눌러주세요</button>
+        <!-- 버튼 요소는 안에. 글씨가 아닌  -->
+         <button>
+            <img src="./image/sydney.jpg" alt="시드니이미지 버튼" width="50">
+         </button>
+
+        
+
+
+
+
+    
+    </body>
+</html>
