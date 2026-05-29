@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>예약 정보</title>
+    <style>
+        ul{
+                list-style: none;
+                padding: left 0;
+            
+    }
+    </style>
+</head>
+<body>
+    <h1>예약 정보</h1>
+    <form action="./ooo.php" method="post">
+        <ul>
+            <li>
+                <label for="r-name">이름</label>
+                <input type="text" id="r-name" name="name">
+            </li>
+            <li>
+                <label for="r-phone">전화</label>
+                <input type="tel" id="r-phone" name="phone">
+            </li>
+            <li>
+                <label for="r-email">이메일</label>
+                <input type="email" id="r-email" name="email">
+            </li>
+            <li>
+                <input type="submit" value="예약하기">
+            </li>
+            </ul>
+    </form>
+    <h2>예약 확인 페이지</h2>
+        <!-- 파일을 전송할 때는 key=value방식이 아니라 다른 방식으로 보내야 함 그래서 -->
+         
+    <form action="./qqq.php" method="post">
+        <input type="submit" value="예약 페이지로 이동">
+    </form>
+</body>
+</html>

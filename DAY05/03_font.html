@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>font text style</title>
+
+        <!-- 내부 스타일 시트로 -->
+         <style>
+            /* 이 영역 안에서는 css의 문법체계 */
+            /* 글꼴 지정 */
+            p{font-family: 'Times New Roman', Times, serif;}
+            p{font-family: 'Freestyle Script', monospace;}
+            p{font-family: '휴먼옛체', serif;}
+
+            /* 마지막 글꼴은 서체로 마무리 */
+            p{font-family:serif;}
+            p{font-family: sans-serif;}
+            p{font-family: monospace;}
+            p{font-family:  fantasy;}
+            p{font-family: cursive;}
+
+            /* 사용자의 플랫폼 환경 상관없이 같은 글꼴이 보여지려면 */
+            /* 본인만의 글꼴읆 만들어 지정해야 함 이를 웹폰트라고 부름. */
+            /* 별도의 폰트 파일이 필요함.(.ttf .otp) */
+
+            /* 웹폰트 제작: 나만의 폰트이름 만들기 */
+            @font-face{
+                font-family: 'my font';
+                src: url("./font/Jalnan.ttf");
+            }
+
+            /* 웹폰트를 p요소에 적용 */
+            p{font-family: 'my font', monospace;}
+
+
+            @font-face{
+             font-family: 'my font2';
+                src: url("./font/Jalnan.ttf");
+            }
+            p{font-family: 'my font2', monospace;}
+            /* 책에는 Google font, 아이콘폰트등을 적용하는 예제도 있음 */
+
+            /* 2. 글씨 크기 */
+            p{font-size: 20px;} 
+            p{font-size: 150%;} /*원래 폰트 사이즈의 150%크기*/
+            p{font-size: 1.5em;}/*원래 폰트 사이즈의 1.5배(권장 단위)*/
+            p{font-size: medium;}
+            p{font-size: large;}
+
+            /* 무표 퐅트 사이트 : 산돌구름, 눈누 */
+
+            /* 3. 볼드체 */
+            p{font-weight: bold;}
+            p{font-weight: normal;}
+            
+            /* 4. 이텔릭체 */
+            p{font-style: italic;}
+            p{font-style: normal;}
+
+            /* 1~4까지의 속성을 한번에 축약으로 [(weihth, style)size family]*/
+            p{font: bold italic 1.5em "my font2", serif ;}
+            /* 필요한 것만 순서대로 써도 됩니다. */
+            p{font: 1.3em "my font", sans-serif;}
+
+            /* font style--------------- */
+
+            /* text style */
+            /* 1. 텍스트 정렬(수평정렬) */
+            p{text-align: right;}
+            p{text-align: center;}
+            p{text-align: justify;}/*양쪽정렬*/
+
+            /* 2.대소문자 변환(영어만 가능) */
+            p{text-transform: lowercase;}
+            p{text-transform: uppercase;}
+            p{text-transform: capitalize;}
+
+            /* 3. 텍스트 줄 긋기 */
+            p{text-decoration: overline;}
+            p{text-decoration:  underline;}
+            p{text-decoration: line-through;}
+            p{text-decoration: none;}
+
+
+            /* 4. 텍스트에 그림자 효과 */
+            p{text-shadow:  5px 3px 5px red;}/*x축 y축 떠있는 정도 색상*/
+            /* 5. ㅓ워드랩 */
+            p.aa{
+                width: 5cm;
+                border: 1px solid blue;
+
+                word-wrap: break-word;
+            }
+
+            /* 5. 다중 컬룸(칸) */
+            p.bb{
+                column-count: 2;
+                column-gap: 80px;
+                column-rule: 4px dotted  ;
+            }
+
+
+
+         </style>
+    </head>
+    <body>
+        
+        <p>hello world</p>
+        <p>한글은 어떠한가?</p>
+
+        <p class="aa">
+            한글은 전혀 문제 없이 자동으로 워드랩된니다.
+            aljfldkflddkfidjlchlscjlsncljlsnclsnclsncl
+        </p>
+
+        <p class=""bb>
+            lor
+
+        </p>
+        <hr>
+        <!-- text-aline은 글씨 정렬이 아니라 자식요소의 수평정렬도됨. -->
+         <p style="text-align: center; background-color: aquamarine;">
+            <a href="">naver</a>
+         </p>
+         <!-- 단, 인라인 요소안의 콘텐츠를 text-align으로 수평정렬되지 않음. -->
+         <span style="background: antiquewhite; text-align: center;">
+            hello
+         </span>
+
+         <!-- 인라인 요소를 가운데 배치 -->
+          <div style="text-align: center;">
+            <span>hello</span>
+          </div>
+    </body>
+</html>
