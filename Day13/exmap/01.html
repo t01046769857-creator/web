@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다른 이미지로 마커 생성하기</title>
+</head>
+<body>
+    <div id="map" style="width: 100%; height: 350px;"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=699e772ebafc82733dc0f4a0582c1668"></script>
+    <script>
+        var mapContainer = document.getElementById('map')
+        mapOption={
+            center: new kakao.maps.LatLng(37.48685134841256, 126.92944578243208),
+            level : 4
+        }
+    </script>
+    <script>
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    var imageSrc = 'https:t1.daumcdn.net/olcalimages/07/mapapidoc/marker_red.png',
+    imageSize = new kakao.maps.Size(64,69),
+    imageOption = {offset: new kakao.maps.Point(27,69)};
+    
+
+    var markerimage = new kakao.maps.Markerimage(imageSrc, imageSize, imageOption),
+    markerPosition = new kaka0.maps.LatLng(37.48685134841256, 126.92944578243208);
+
+    var marker = new kakao.maps.Marker({
+        postion: markerPosition,
+        image : markerimage
+    })
+
+    var marker = new kakao.maps.Marker({
+        position: markerPosition,
+        image:markerimage
+    })
+
+    marker.setMap(map);
+
+    </script>
+
+
+
+
+    
+</body>
+</html>
