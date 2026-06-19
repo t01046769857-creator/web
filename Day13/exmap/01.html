@@ -10,30 +10,31 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=699e772ebafc82733dc0f4a0582c1668"></script>
     <script>
         var mapContainer = document.getElementById('map')
-        mapOption={
-            center: new kakao.maps.LatLng(37.48685134841256, 126.92944578243208),
+        var mapOption={
+            center: new kakao.maps.LatLng(
+                37.48659345150115,  
+                126.92925999999999
+            ),
             level : 4
         }
     </script>
     <script>
     var map = new kakao.maps.Map(mapContainer, mapOption);
 
-    var imageSrc = 'https:t1.daumcdn.net/olcalimages/07/mapapidoc/marker_red.png',
+    var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png',
     imageSize = new kakao.maps.Size(64,69),
     imageOption = {offset: new kakao.maps.Point(27,69)};
     
 
-    var markerimage = new kakao.maps.Markerimage(imageSrc, imageSize, imageOption),
-    markerPosition = new kaka0.maps.LatLng(37.48685134841256, 126.92944578243208);
-
-    var marker = new kakao.maps.Marker({
-        postion: markerPosition,
-        image : markerimage
-    })
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition = new kakao.maps.LatLng(
+        37.48659345150115, 
+        126.92925999999999
+    );
 
     var marker = new kakao.maps.Marker({
         position: markerPosition,
-        image:markerimage
+        image : markerImage
     })
 
     marker.setMap(map);
