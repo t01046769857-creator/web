@@ -138,9 +138,14 @@
 }
 
 /* 메뉴 스타일 */
+body{
+    margin: 0;
+    padding: 0;
+}
 #nav{
     max-width: 1200px;
     margin: 0 auto;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -174,10 +179,15 @@
 }
 
 /* 비디오 위에 글자 넣기 */
+.video-box{
+    position: relative;
+    z-index: 1;
+}
 .video-text{
     position: absolute;
     top: 15%;
     right: 5%;
+    z-index: 2;
     color: white;
     font-size: 65px;
     font-weight: bold;

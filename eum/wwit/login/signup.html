@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./login.css">
 </head>
+
 <body>
 
     <div class="container">
@@ -18,19 +19,26 @@
         </div>
 
         <form class="signup-form">
-            <input type="text" placeholder="아이디"><br>
-            <input type="password" placeholder="비밀번호"><br>
-            <input type="password" placeholder="비밀번호 확인"><br>
+
+            <!-- ✔ JS가 읽을 수 있게 id 추가 -->
+            <input id="id" type="text" placeholder="아이디"><br>
+
+            <input id="pw" type="password" placeholder="비밀번호"><br>
+
+            <!-- 비밀번호 확인 -->
+            <input id="pw2" type="password" placeholder="비밀번호 확인"><br>
 
             <div class="btn-box">
                 <button type="button" onclick="signup()">가입하기</button>
                 <button type="button" onclick="goLogin()">로그인으로</button>
             </div>
+
         </form>
 
     </div>
 
-    <script src="./login.js" defer></script>
+    <!-- ✔ signup.js 연결 -->
+    <script src="./signup.js" defer></script>
 
 </body>
 </html>
