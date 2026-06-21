@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="name">
+            <h1>eum tour</h1>
+            <h3>회원가입</h3>
+            <p>새로운 계정을 만들어보세요</p>
+        </div>
+
+        <form class="signup-form">
+            <input type="text" placeholder="아이디"><br>
+            <input type="password" placeholder="비밀번호"><br>
+            <input type="password" placeholder="비밀번호 확인"><br>
+
+            <div class="btn-box">
+                <button type="button" onclick="signup()">가입하기</button>
+                <button type="button" onclick="goLogin()">로그인으로</button>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="./login.js" defer></script>
+
+</body>
+</html>
